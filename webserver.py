@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+# Author: Jimmie Tyrrell
+# License: Unlicense
+#
 # Drop this in /usr/local/bin, and chmod o+x
 #
 # Usage:
