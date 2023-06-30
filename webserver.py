@@ -2,7 +2,7 @@
 # Author: Jimmie Tyrrell
 # License: Unlicense
 #
-# Drop this somewhere like /usr/local/bin/webserver, then chmod o+x
+# Drop this somewhere like /usr/local/bin, and chmod o+x
 #
 # Usage:
 #   webserver # Starts a webserver in the current directory on port 8000
@@ -26,13 +26,13 @@ class Handler(SimpleHTTPRequestHandler):
         SimpleHTTPRequestHandler.end_headers(self)
 
 def main():
-    parser=argparse.ArgumentParser()
+    parser = argparse.ArgumentParser()
 
     parser.add_argument("--port", help="Port to run the webserver on (default 8000)", default=8000)
     parser.add_argument("--host", help="Host to run the webserver on (default empty)", default=None)
     parser.add_argument("--path", help="Path to serve documents from (default .)", default=".")
 
-    args=parser.parse_args()
+    args = parser.parse_args()
 
     print(f"WebServer starting. Args: {vars(args)}")
 
